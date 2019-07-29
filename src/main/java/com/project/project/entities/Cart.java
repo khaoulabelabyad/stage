@@ -47,7 +47,6 @@ public class Cart {
 
     }
 
-
     // cart.count() count the quantities i.e total items of the cart
     public int count(){
         int sum = 0;
