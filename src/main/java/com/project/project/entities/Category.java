@@ -10,32 +10,33 @@ public class Category {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
-   private String name;
+    private int id;
+    private String name;
     private String description;
+    private int orderId;
 
     // referencing side
 
 
     //one category to many products
-    @OneToMany(fetch = FetchType.LAZY, mappedBy = "category_id" )
+    @OneToMany(fetch = FetchType.LAZY, mappedBy = "category_id")
     // maps to the variable of the referencing side in the owning side
     private List<Product> products = new ArrayList<>();
 
     public Category() {
     }
 
-    public Category(Long id, String name, String description) {
+    public Category(int id, String name, String description) {
         this.id = id;
         this.name = name;
         this.description = description;
     }
 
-    public Long getId() {
+    public int getId() {
         return id;
     }
 
-    public void setId(Long id) {
+    public void setId(int id) {
         this.id = id;
     }
 
@@ -53,6 +54,14 @@ public class Category {
 
     public void setDescription(String description) {
         this.description = description;
+    }
+
+    public int getOrderId() {
+        return orderId;
+    }
+
+    public void setOrderId(int orderId) {
+        this.orderId = orderId;
     }
 
     public List<Product> getProducts() {

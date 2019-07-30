@@ -5,10 +5,12 @@ import java.io.Serializable;
 import java.util.List;
 
 @Entity
+@Inheritance(strategy = InheritanceType.SINGLE_TABLE)
+@DiscriminatorColumn(name="Product_Type") // which column distinguishes the product
 // why serializable ?? every entity in JPA is automatically-serializable,  connection between different networks
 public class Product implements Serializable {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.IDENTITY) // assign a unique value to your identity field automatically
     private Long id;
     private String designation;
     private int price;
