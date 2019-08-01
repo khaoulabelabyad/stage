@@ -7,7 +7,7 @@ import java.util.Date;
 import java.util.List;
 
 @Entity
-@Table(name = "Orders")
+@Table(name = "orders")
 public class Order {
     @Id
     @GeneratedValue
@@ -17,10 +17,11 @@ public class Order {
     @Temporal(TemporalType.TIMESTAMP)
     private Date deliveryDate;
     private double amount;
-    @OneToMany
-    private List<StatusHistory> history = new ArrayList<>();
 
-    private Status currentStatus;
+    /*@OneToMany
+    private List<StatusHistory> history = new ArrayList<>();*/
+
+    /*private Status currentStatus;*/
 
     @ManyToMany
     private List<Product> products;
@@ -59,6 +60,7 @@ public class Order {
     public void setAmount(double amount) {
         this.amount = amount;
     }
+/*
 
     public List<StatusHistory> getHistory() {
         return history;
@@ -75,6 +77,7 @@ public class Order {
     public void setCurrentStatus(Status currentStatus) {
         this.currentStatus = currentStatus;
     }
+*/
 
     public List<Product> getProducts() {
         return products;

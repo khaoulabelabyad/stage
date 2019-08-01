@@ -5,39 +5,39 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Entity
-@Table(name = "Categories")
+@Table(name = "categories")
 public class Category {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id;
+    private int category_id;
     private String name;
     private String description;
-    private int orderId;
+    private int orderId; // ??? why
 
     // referencing side
 
 
     //one category to many products
-    @OneToMany(fetch = FetchType.LAZY, mappedBy = "category_id")
+    @OneToMany(fetch = FetchType.LAZY, mappedBy = "category" )
     // maps to the variable of the referencing side in the owning side
     private List<Product> products = new ArrayList<>();
 
     public Category() {
     }
 
-    public Category(int id, String name, String description) {
-        this.id = id;
+    public Category(int category_id, String name, String description) {
+        this.category_id = category_id;
         this.name = name;
         this.description = description;
     }
 
     public int getId() {
-        return id;
+        return category_id;
     }
 
     public void setId(int id) {
-        this.id = id;
+        this.category_id = id;
     }
 
     public String getName() {

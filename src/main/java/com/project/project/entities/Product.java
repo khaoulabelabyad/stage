@@ -5,8 +5,7 @@ import java.io.Serializable;
 import java.util.List;
 
 @Entity
-@Inheritance(strategy = InheritanceType.SINGLE_TABLE)
-@DiscriminatorColumn(name="Product_Type") // which column distinguishes the product
+@Table(name = "products")
 // why serializable ?? every entity in JPA is automatically-serializable,  connection between different networks
 public class Product implements Serializable {
     @Id
@@ -15,18 +14,19 @@ public class Product implements Serializable {
     private String designation;
     private int price;
     private int quantity;
-    private Long category_id;
+    private int category_id;
 
     // the owning side of the relationship, side of the foreign key
 
-   @ManyToOne(fetch = FetchType.LAZY)// many products to one category
-   @JoinColumn(name = "category_id", insertable = false , updatable = false) // means that the product table will have a fk_column named...
+    @ManyToOne(fetch = FetchType.LAZY )// many products to one category
+    @JoinColumn(name = "category_id" , insertable = false , updatable = false)
+    // means that the product table will have a fk_column named...
     private Category category;
 
 
     // categoryId foreign key referencing to the primary key on Category
     // Double and Integer in case both variables are unknown -> Category constructor
-    public Product(Long id, String designation, Integer price, Integer quantity, Long category_id) {
+    public Product(Long id, String designation, Integer price, Integer quantity, int categor_id) {
         this.id = id;
         this.designation = designation;
         this.price = price;
@@ -66,12 +66,12 @@ public class Product implements Serializable {
         this.quantity = quantite;
     }
 
-    public Long getCategoryId() {
+    public int getCategoryId() {
         return category_id;
     }
 
-    public void setCategoryId(Long categoryId) {
-        this.category_id = categoryId;
+    public void setCategoryId(int category_id) {
+        this.category_id = category_id;
     }
 }
 
