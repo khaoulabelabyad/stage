@@ -7,6 +7,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
+@RestController
 public class ProductRestController {
 
     @Autowired
@@ -16,8 +17,9 @@ public class ProductRestController {
     public ProductRepository productRepository;*/
 
     // GET-ALL
-    @GetMapping(value = "/all")
-    public @ResponseBody List<Product> getAllProducts() {
+    @GetMapping(value = "/products")
+    @ResponseBody
+    public  List<Product> getAllProducts() {
         return productService.getAllProducts();
     }
 

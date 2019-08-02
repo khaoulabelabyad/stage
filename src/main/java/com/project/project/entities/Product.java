@@ -34,6 +34,9 @@ public class Product implements Serializable {
         this.category_id = category_id;
     }
 
+    public Product() {
+    }
+
     public Long getId() {
         return id;
     }
