@@ -1,12 +1,10 @@
 package com.project.project.entities;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import javax.persistence.OneToOne;
+import javax.persistence.*;
 
 
 @Entity
+@Table(name = "customers")
 public class Customer {
     // 2 cases , new customer/customer connected before
 

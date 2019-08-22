@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.Optional;
 
 @RestController
 public class ProductRestController {
@@ -18,7 +19,6 @@ public class ProductRestController {
 
     // GET-ALL
     @GetMapping(value = "/products")
-    @ResponseBody
     public  List<Product> getAllProducts() {
         return productService.getAllProducts();
     }
@@ -31,24 +31,28 @@ public class ProductRestController {
     }*/
 
     // GET
+
     @GetMapping(value = "/products/{id}")
-    public Product getProduct(@PathVariable(name = "id") Long id) {
+    public Optional<Product> getProduct(@PathVariable(name = "id") Long id) {
         return productService.getProduct(id);
     }
 
     // PUT
+
     @PutMapping(value = "/products/{id}")
     public void updateProduct(@PathVariable(name = "id") Long id, @RequestBody Product product) {
         productService.updateProduct(id, product);
     }
 
     // POST
+
     @PostMapping(value = "/products")
     public void save(@RequestBody Product product) {
         productService.addProduct(product);
     }
 
     // DELETE
+
     @DeleteMapping(value = "/products/{id}")
     public void delete(@PathVariable(name = "id") Long id) {
         productService.deleteProduct(id);
