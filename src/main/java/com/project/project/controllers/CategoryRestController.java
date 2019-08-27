@@ -22,13 +22,13 @@ public class CategoryRestController {
     }
 
     // GET
-    @GetMapping(value = CATEGORY_GET_CONTENT_ENDPOINT)
+    @GetMapping(value = "/category/{category_id}")
     public Category getCategory(@PathVariable int id) {
         return categoryService.getCategory(id);
     }
 
     // PUT
-    @PutMapping(value = CATEGORY_GET_CONTENT_ENDPOINT)
+    @PutMapping(value = "/category/{category_id}")
     public void updateProduct(@PathVariable(name = "id") int id, @RequestBody Category category) {
         categoryService.updateCategory(id, category);
     }
@@ -40,7 +40,7 @@ public class CategoryRestController {
     }
 
     // DELETE
-    @DeleteMapping(value = CATEGORY_GET_CONTENT_ENDPOINT)
+    @DeleteMapping(value = "/category/{category_id}")
     public void delete(@PathVariable(name = "id") int id) {
         categoryService.deleteCategory(id);
     }

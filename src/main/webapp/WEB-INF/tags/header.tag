@@ -6,7 +6,7 @@
     <div class="container">
         <!-- Brand and toggle get grouped for better mobile display -->
         <div class="navbar-header">
-            <a class="navbar-brand" href="/">Shoopy</a>
+            <a class="navbar-brand" href="/">OnTheGo</a>
         </div>
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
@@ -17,7 +17,7 @@
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Categories <span class="caret"></span></a>
                     <ul class="dropdown-menu">
                         <c:forEach items="${headerData.categories}" var="category">
-                            <li><a href="/category/${category.id}">${category.name}</a></li>
+                            <li><a href="/category/${category.category_id}">${category.name}</a></li>
                         </c:forEach>
 
                     </ul>

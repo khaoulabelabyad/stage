@@ -13,7 +13,7 @@ public class Category {
     private int category_id;
     private String name;
     private String description;
-    private int orderId; // ??? why
+    private int orderId;
 
     // referencing side
 

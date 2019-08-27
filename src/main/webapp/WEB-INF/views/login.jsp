@@ -1,10 +1,15 @@
-<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"  %>
+<html lang="en">
 <% String ctxPath = request.getContextPath(); %>
 <%@ taglib tagdir="/WEB-INF/tags" prefix="tag" %>
+<%@ taglib prefix="form" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <head>
-    <link rel="stylesheet" href="/css/bootstrap.min.css"/>
-    <link rel="stylesheet" href="/css/theme.css"/>
+    <!-- Bootstrap Core CSS -->
+    <link href="resources.webjars.bootstrap.3.3.6/css/bootstrap.css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="/css/theme.css" rel="stylesheet">
     <title>Login</title>
 </head>
 <body>
@@ -21,12 +26,12 @@
         <div class="col-md-6 col-md-offset-3">
             <div class="panel panel-login">
                 <div class="panel-body">
-                    <c:if test="${not empty loginError}">
+                    <form:if test="${not empty loginError}">
                         <div class="alert alert-danger">Wrong user or password</div>
-                    </c:if>
-                    <c:if test="${registration}">
+                    </form:if>
+                    <form:if test="${registration}">
                         <div class="alert alert-success">Registration successfully</div>
-                    </c:if>
+                    </form:if>
                     <div class="row">
                         <div class="col-lg-12">
                             <form id="login-form" action="/login" method="post" role="form"
@@ -59,9 +64,9 @@
     </div>
 </div>
 <!-- jQuery -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+<script src="resources.webjars.jsquery.2.2.4/jquery.js/jquery.min.js"></script>
 
 <!-- Bootstrap Core JavaScript -->
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+<script src="resources.webjars.bootstrap.3.3.6/js/bootstrap.js/bootstrap.min.js"></script>
 </body>
 </html>

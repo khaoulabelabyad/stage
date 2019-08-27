@@ -23,7 +23,7 @@ public class InitController {
     @Autowired
     private CustomerInitializer customerInitializer;
 
-    @GetMapping(path = APP_INIT)
+    @GetMapping(path = "/init")
     @ResponseBody
     public String init(){
         categoriesInitializer.init();

@@ -8,10 +8,10 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Ecommerce Website</title>
+    <title>OnTheGo Website</title>
 
     <!-- Bootstrap Core CSS -->
-    <link href="/css/bootstrap.min.css" rel="stylesheet">
+    <link href="resources.webjars.bootstrap.3.3.6/css/bootstrap.css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Custom CSS -->
     <link href="/css/style.css" rel="stylesheet">
@@ -48,10 +48,10 @@
 <!-- /.container -->
 
 <!-- jQuery -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+<script src="resources.webjars.jsquery.2.2.4/jquery.js/jquery.min.js"></script>
 
 <!-- Bootstrap Core JavaScript -->
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+<script src="resources.webjars.bootstrap.3.3.6/js/bootstrap.js/bootstrap.min.js"></script>
 
 
 </body>
