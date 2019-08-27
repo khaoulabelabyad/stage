@@ -11,7 +11,7 @@ public class CategoryDataInitializer {
     public void init(){
         {
             Category c = new Category();
-            c.setId(1);
+            c.setCategory_id(1);
             c.setName("Equipement");
             c.setOrderId(1);
             categoryRepository.save(c);
@@ -19,7 +19,7 @@ public class CategoryDataInitializer {
 
         {
             Category c = new Category();
-            c.setId(2);
+            c.setCategory_id(2);
             c.setName("Footwear");
             c.setOrderId(2);
             categoryRepository.save(c);
@@ -28,7 +28,7 @@ public class CategoryDataInitializer {
         {
             // needs subdivision into categories too
             Category c = new Category();
-            c.setId(3);
+            c.setCategory_id(3);
             c.setName("ActiveWear");
             c.setOrderId(3);
             categoryRepository.save(c);

@@ -33,7 +33,7 @@ public class CategoryService {
 
     // PUT
     public void updateCategory(int id , Category category) {
-        category.setId(id);
+        category.setCategory_id(id);
         categoryRepository.save(category);
     }
 

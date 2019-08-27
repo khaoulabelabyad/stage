@@ -10,7 +10,7 @@ import java.util.List;
 public class Product implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY) // assign a unique value to your identity field automatically
-    private Long id;
+    private int id;
     private String designation;
     private int price;
     private int quantity;
@@ -26,7 +26,7 @@ public class Product implements Serializable {
 
     // categoryId foreign key referencing to the primary key on Category
     // Double and Integer in case both variables are unknown -> Category constructor
-    public Product(Long id, String designation, Integer price, Integer quantity, int categor_id) {
+    public Product(int id, String designation, Integer price, Integer quantity, int category_id) {
         this.id = id;
         this.designation = designation;
         this.price = price;
@@ -37,11 +37,11 @@ public class Product implements Serializable {
     public Product() {
     }
 
-    public Long getId() {
+    public int getId() {
         return id;
     }
 
-    public void setId(Long id) {
+    public void setId(int id) {
         this.id = id;
     }
 
@@ -76,5 +76,7 @@ public class Product implements Serializable {
     public void setCategoryId(int category_id) {
         this.category_id = category_id;
     }
+
+
 }
 

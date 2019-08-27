@@ -31,13 +31,12 @@ public class Category {
         this.name = name;
         this.description = description;
     }
-
-    public int getId() {
+    public int getCategory_id() {
         return category_id;
     }
 
-    public void setId(int id) {
-        this.category_id = id;
+    public void setCategory_id(int category_id) {
+        this.category_id = category_id;
     }
 
     public String getName() {

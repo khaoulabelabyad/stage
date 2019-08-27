@@ -33,14 +33,14 @@ public class ProductRestController {
     // GET
 
     @GetMapping(value = "/products/{id}")
-    public Optional<Product> getProduct(@PathVariable(name = "id") Long id) {
+    public Optional<Product> getProduct(@PathVariable(name = "id") int id) {
         return productService.getProduct(id);
     }
 
     // PUT
 
     @PutMapping(value = "/products/{id}")
-    public void updateProduct(@PathVariable(name = "id") Long id, @RequestBody Product product) {
+    public void updateProduct(@PathVariable(name = "id") int id, @RequestBody Product product) {
         productService.updateProduct(id, product);
     }
 
@@ -54,7 +54,7 @@ public class ProductRestController {
     // DELETE
 
     @DeleteMapping(value = "/products/{id}")
-    public void delete(@PathVariable(name = "id") Long id) {
+    public void delete(@PathVariable(name = "id") int id) {
         productService.deleteProduct(id);
     }
 }

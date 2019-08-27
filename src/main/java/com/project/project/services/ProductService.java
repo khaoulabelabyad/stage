@@ -23,7 +23,7 @@ public class ProductService {
     }
 
     // GET
-    public Optional<Product> getProduct(Long id) {
+    public Optional<Product> getProduct(int id) {
         return productRepository.findById(id);
     }
 
@@ -33,12 +33,12 @@ public class ProductService {
     }
 
     // PUT
-    public void updateProduct(Long id, Product product) {
+    public void updateProduct(int id, Product product) {
         product.setId(id);
         productRepository.save(product);
     }
     // DELETE
-    public void deleteProduct(Long id){
+    public void deleteProduct(int id){
         productRepository.deleteById(id);
     }
 }

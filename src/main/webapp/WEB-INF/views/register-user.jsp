@@ -1,0 +1,73 @@
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<% String ctxPath = request.getContextPath(); %>
+<%@ taglib tagdir="/WEB-INF/tags" prefix="tag" %>
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
+<html>
+<head>
+    <link rel="stylesheet" href="/css/bootstrap.min.css"/>
+    <title>Registration</title>
+    <style>
+        #register-form span {
+            color: #a94442;
+            background-color: #f2dede;
+            border-color: #ebccd1;
+        }
+        .header-spacer{
+            margin-top: 55px;
+        }
+    </style>
+</head>
+<body>
+<tag:header headerData="${headerDTO}"/>
+<div class="container header-spacer">
+    <div class="page-header">
+        <h3>Register
+            <small>a customer</small>
+        </h3>
+    </div>
+
+    <div class="row">
+        <div class="col-lg-12">
+
+            <form:form id="register-form" action="/register" method="post" modelAttribute="customerForm">
+
+                <div class="form-group">
+                    <label for="first">First name</label>
+                    <form:input path="firstName" type="text" class="form-control" id="first" placeholder="First name"/>
+                    <form:errors path="firstName"/>
+                </div>
+                <div class="form-group">
+                    <label for="last">Last name</label>
+                    <form:input type="text" class="form-control" id="last" path="lastName" placeholder="Last name"/>
+                    <form:errors path="lastName"/>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email address</label>
+                    <form:input type="text" class="form-control" id="email" path="email" placeholder="Email"/>
+                    <form:errors path="email"/>
+                </div>
+                <div class="form-group">
+                    <label for="login">Login</label>
+                    <form:input type="text" class="form-control" id="login" path="login" placeholder="Login"/>
+                    <form:errors path="login"/>
+                </div>
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <form:input type="password" class="form-control" id="password" path="password"
+                                placeholder="Password"/>
+                    <form:errors path="password"/>
+                </div>
+                <button type="submit" class="btn btn-primary">Register Now</button>
+
+            </form:form>
+        </div>
+    </div>
+</div>
+<!-- jQuery -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+
+<!-- Bootstrap Core JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.
+com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+</body>
+</html>
