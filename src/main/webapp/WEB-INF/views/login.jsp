@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css"/>
 
     <!-- Custom CSS -->
-    <link href="../css/theme.css" rel="stylesheet">
+    <link href="/css/theme.css" rel="stylesheet">
     <title>Login</title>
 </head>
 <body>
@@ -64,9 +64,9 @@
     </div>
 </div>
 <!-- jQuery -->
-<script src="../jquery.js/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
 <!-- Bootstrap Core JavaScript -->
-<script src="../js/bootstrap.js/bootstrap.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
 </body>
 </html>
