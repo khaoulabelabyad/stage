@@ -3,8 +3,10 @@ package com.project.project.services;
 import com.project.project.dao.CategoryRepository;
 import com.project.project.entities.Category;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 
-public class CategoryDataInitializer {
+@Component
+public class CategoryDataInitializer implements Initializer{
     @Autowired
     private CategoryRepository categoryRepository;
 
@@ -26,7 +28,6 @@ public class CategoryDataInitializer {
         }
 
         {
-            // needs subdivision into categories too
             Category c = new Category();
             c.setCategory_id(3);
             c.setName("ActiveWear");

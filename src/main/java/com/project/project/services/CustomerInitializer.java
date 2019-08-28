@@ -4,7 +4,9 @@ import com.project.project.dao.CustomerRepository;
 import com.project.project.entities.Customer;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.password.PasswordEncoder;
+import org.springframework.stereotype.Component;
 
+@Component
 public class CustomerInitializer implements Initializer {
     @Autowired
     private CustomerRepository customerRepository;

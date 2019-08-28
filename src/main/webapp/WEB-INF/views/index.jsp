@@ -11,7 +11,7 @@
     <title>OnTheGo Website</title>
 
     <!-- Bootstrap Core CSS -->
-    <link href="resources.webjars.bootstrap.3.3.6/css/bootstrap.css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css"/>
 
     <!-- Custom CSS -->
     <link href="/css/style.css" rel="stylesheet">
@@ -48,10 +48,10 @@
 <!-- /.container -->
 
 <!-- jQuery -->
-<script src="resources.webjars.jsquery.2.2.4/jquery.js/jquery.min.js"></script>
+<script src="../jquery.js/jquery.min.js"></script>
 
 <!-- Bootstrap Core JavaScript -->
-<script src="resources.webjars.bootstrap.3.3.6/js/bootstrap.js/bootstrap.min.js"></script>
+<script src="../js/bootstrap.js/bootstrap.min.js"></script>
 
 
 </body>

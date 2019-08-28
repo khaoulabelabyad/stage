@@ -5,19 +5,16 @@ import com.project.project.services.CustomerInitializer;
 import com.project.project.services.ProductDataInitializer;
 import com.project.project.services.StockDataInitializer;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
-import static com.project.project.controllers.Paths.AppPaths.APP_INIT;
-
+@Controller
 public class InitController {
     @Autowired
-    private ProductDataInitializer articlesInitializer;
+    private ProductDataInitializer productDataInitializer;
     @Autowired
     private CategoryDataInitializer categoriesInitializer;
-
-
-
     @Autowired
     private StockDataInitializer stockInitializer;
     @Autowired
@@ -27,7 +24,7 @@ public class InitController {
     @ResponseBody
     public String init(){
         categoriesInitializer.init();
-        articlesInitializer.init();
+        productDataInitializer.init();
         stockInitializer.init();
         customerInitializer.init();
         return "Initialization succeeded!";

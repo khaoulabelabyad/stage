@@ -3,8 +3,10 @@ package com.project.project.services;
 import com.project.project.dao.ProductRepository;
 import com.project.project.entities.Product;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 
-public class ProductDataInitializer {
+@Component
+public class ProductDataInitializer implements Initializer{
     @Autowired
     ProductRepository productRepository;
 
